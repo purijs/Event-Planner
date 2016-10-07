@@ -1,0 +1,57 @@
+<div class="col-md-11 col-centered event-planner-outer" ng-show="showEvent">
+					        <span class="form-text">Launched Events</span>
+					        <hr class="seperator"/>
+					        <p class="eventNew" align="center" ng-click="redo()"><u>Create New Event</u></p>
+					        <div ng-repeat="event in events track by $index" class="eventActive">
+					            <span><span class="glyphicon glyphicon-calendar gCalendar" aria-hidden="true"></span><b>{{ event.eventName }}</b> hosted by <b>{{ event.eventHost }}</b></span>
+					            <hr/>
+					            <table class="table-responsive" border="0">
+					                <tr>
+					                    <td><span class="glyphicon glyphicon-time" aria-hidden="true"></span></td>
+					                    <td><span class="glyphicon glyphicon-tags" aria-hidden="true"></span></td>
+					                </tr>
+					                <tr>
+					                    <td width="65%">{{ event.eventSDate | date }}, {{ event.eventSTime | date: "h:mm a" }} - {{ event.eventEDate | date }}, {{ event.eventETime | date: "h:mm a" }}</td>
+					                    <td>{{ event.eventType }}</td>
+					                </tr>
+					            </table>
+					            <br>
+					            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#guestModal-{{ $index }}">View Guest List</button>
+					            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#guestModalInfo-{{ $index }}">About The Event</button>
+					            <br>
+					            <span class="loc"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> &nbsp;{{ event.eventLoc }}</span>
+					            <div class="modal fade" id="guestModal-{{ $index }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+					                <div class="modal-dialog" role="document">
+					                    <div class="modal-content">
+					                        <div class="modal-header">
+					                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					                            <h4 class="modal-title" id="guestModalLabel">Guest(s) List</h4>
+					                        </div>
+					                        <div class="modal-body">
+					                            {{ event.eventGuest }}
+					                        </div>
+					                        <div class="modal-footer">
+					                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					                        </div>
+					                    </div>
+					                </div>
+					            </div>
+								 <div class="modal fade" id="guestModalInfo-{{ $index }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+					                <div class="modal-dialog" role="document">
+					                    <div class="modal-content">
+					                        <div class="modal-header">
+					                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					                            <h4 class="modal-title" id="guestModalLabel">About The Event</h4>
+					                        </div>
+					                        <div class="modal-body">
+					                            {{ event.eventGInfo }}
+					                        </div>
+					                        <div class="modal-footer">
+					                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					                        </div>
+					                    </div>
+					                </div>
+					            </div>
+
+					        </div>
+					    </div>
