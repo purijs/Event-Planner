@@ -1,0 +1,132 @@
+@font-face {
+    font-family: 'Myriad Pro';
+    src: url('../fonts/MYRIADPROREGULAR.ttf') format('woff'),
+    url('../fonts/MYRIADPROREGULAR.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'proximanovalight';
+    src: url('../fonts/proximanovalight.ttf') format('woff'),
+    url('../fonts/proximanovalight.ttf') format('truetype');
+}
+[ng\:cloak],[ng-cloak]{
+    display: none !important;
+}
+body {
+    background: url('../images/bg.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+.planner-block {
+    margin-top: 50px;
+}
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    margin-right:-2px;
+}
+.form-area {
+    background: #fff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 3px 4px 14px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 4px 14px -4px rgba(0,0,0,0.75);
+    box-shadow: 3px 4px 14px -4px rgba(0,0,0,0.75);
+}
+.ev-c {
+	display:none;
+}
+.form-area-inner,.form-planner-inner {
+    margin-bottom: 10px;
+    font-family: "Myriad Pro";
+}
+.event-planner-outer {
+    margin-bottom: 10px;
+    font-family: "Myriad Pro";
+}
+.form-planner-inner,.event-planner-outer {
+    max-height:1110px;
+    position: relative;
+    top:10px;
+}
+.form-area-inner {
+    max-height:420px;
+    position: relative;
+    top:10px;
+}
+.form-planner-inner h3,.form-area-inner h3,.event-planner-outer h3 {
+    font-family: proximanovalight;
+}
+.form-text {
+    font-size: 2em;
+    text-align: center;
+}
+.seperator {
+    position: relative;
+    top:-15px;
+}
+.event-table td,th,tr {
+    padding-left: 5px;
+    padding-top: 5px;
+    text-align: center !important;
+}
+.optional-table td,tr,th {
+    padding-left: 5px;
+    padding-top: 5px;
+    text-align: center !important;
+}
+.event-table,.optional-table {
+    width: 100%;
+}
+.eventNew {
+    cursor: pointer;
+}
+.eventActive {
+    margin-top: 10px;
+    height: 225px;
+    width: 100%;
+}
+.eventActive span {
+    text-align: center;
+    position: relative;
+    top: 10px;
+    color: #1b6d85;
+}
+.eventActive table {
+    width: 100%;
+    padding-left: 5px;
+    text-align: left;
+	border:none;
+}
+.eventActive .glyphicon {
+    position: relative;
+    top: -5px;
+}
+.eventActive .loc {
+    text-align: center;
+    font-size: 12px;
+}
+.eventActive .gCalendar {
+    position: relative;
+    top: 1px;
+    right: 5px;
+}
+.eventActive .loc .glyphicon {
+    position: relative;
+    top: 0 !important;
+}
+.eventActive table td {
+    padding-top: 10px !important;
+    font-size:12px;
+    font-stretch: condensed;
+}
+.event-planner-outer {
+    margin-bottom: 20px;
+    font-family: "Myriad Pro";
+}
+.eventActive .guests {
+    cursor: pointer;
+}
